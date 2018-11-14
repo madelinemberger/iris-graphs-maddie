@@ -15,7 +15,8 @@ library(tidyverse)
 iris_graph <- ggplot(iris, aes(x= Petal.Length, y = Petal.Width)) +
   geom_point(aes(color = Species)) +
   theme_classic() +
-  facet_wrap(~ Species, scales = "free") 
+  facet_wrap(~ Species, scales = "free") + 
+  scale_color_manual(breaks = c("setosa", "versicolor", "virginican"), values = c("mediumaquamarine", "turquoise1", "steelblue4"))
   
 iris_graph
 ```
